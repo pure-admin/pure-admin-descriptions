@@ -58,7 +58,7 @@ app.use(PureDescriptions).mount("#app");
 
 - If you are using `Volar`, you can configure compilerOptions.types in tsconfig.json to specify the global component type (especially if you want to get type hints during global registration, you need to add the following configuration)
 
-```json
+```js
 // tsconfig.json
 {
   "compilerOptions": {
