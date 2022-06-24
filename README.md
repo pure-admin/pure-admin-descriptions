@@ -24,9 +24,9 @@ English | [简体中文](./README.zh_CN.md)
 ## 📦 Install
 
 ```bash
-npm install @pureadmin/descriptions -D
+npm install @pureadmin/descriptions
 or 
-pnpm add @pureadmin/descriptions -D
+pnpm add @pureadmin/descriptions
 ```
 
 ## 🦄 Usage

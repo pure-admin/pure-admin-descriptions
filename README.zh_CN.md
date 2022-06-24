@@ -24,9 +24,9 @@
 ## 📦 安装
 
 ```bash
-npm install @pureadmin/descriptions -D
+npm install @pureadmin/descriptions
 or 
-pnpm add @pureadmin/descriptions -D
+pnpm add @pureadmin/descriptions
 ```
 
 ## 🦄 用法
