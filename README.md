@@ -8,6 +8,8 @@
 
 English | [简体中文](./README.zh_CN.md)
 
+- [Preview](https://pure-admin-descriptions.vercel.app)
+
 ## 🤔 Original intention of development
 
 - `element-plus` [Descriptions](https://element-plus.org/en-US/component/descriptions.html#descriptions-item-attributes) `Descriptions Item` attribute can only be written in the `<template></template>` template at present, which is not very flexible. If there are enough `Item` describing the list, the code is written and looks bloated, so I developed this library, Let's explore together

@@ -8,6 +8,8 @@
 
 简体中文 | [English](./README.md)  
 
+- [预览地址](https://pure-admin-descriptions.vercel.app)
+
 ## 🤔 开发初衷
 
 -  `element-plus` [Descriptions](https://element-plus.org/zh-CN/component/descriptions.html#descriptions-item-%E5%B1%9E%E6%80%A7) 的`Descriptions Item`属性目前只能写在`<template></template>`模版里，这样不是很灵活，如果描述列表的`Item`足够多，代码写、看起来很臃肿，于是我开发了这个库，让我们一起探索吧
