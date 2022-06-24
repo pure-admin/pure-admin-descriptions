@@ -54,6 +54,20 @@ app.use(PureDescriptions).mount("#app");
 
 [Click to view the specific usage](https://github.com/xiaoxian521/pure-admin-descriptions/blob/main/src/App.vue)
 
+## Volar support
+
+- If you are using `Volar`, you can configure compilerOptions.types in tsconfig.json to specify the global component type (especially if you want to get type hints during global registration, you need to add the following configuration)
+
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    // ...
+    "types": ["@pureadmin/descriptions/volar"]
+  }
+}
+```
+
 ## License
 
 [MIT © xiaoxian521-2022](./LICENSE)

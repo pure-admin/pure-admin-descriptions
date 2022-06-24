@@ -54,6 +54,20 @@ app.use(PureDescriptions).mount("#app");
 
 [点击查看具体用法](https://github.com/xiaoxian521/pure-admin-descriptions/blob/main/src/App.vue)
 
+## Volar 支持
+
+- 如果您在使用 `Volar`，那么可以在 tsconfig.json 中配置 compilerOptions.types 来指定全局组件类型（尤其是全局注册时要想获得类型提示就需要加上下面配置）
+
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    // ...
+    "types": ["@pureadmin/descriptions/volar"]
+  }
+}
+```
+
 ## 许可证
 
 [MIT © xiaoxian521-2022](./LICENSE)

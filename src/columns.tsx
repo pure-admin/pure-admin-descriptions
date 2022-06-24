@@ -44,9 +44,7 @@ export function useColumns() {
       label: "Hobby",
       value: "girl",
       labelAlign: "left",
-      align: "center",
-      labelColor: "red",
-      color: "green"
+      align: "center"
     }
   ]);
 
