@@ -11,6 +11,18 @@ export default {
     type: Array,
     default: []
   },
+  /** Descriptions Loading */
+  loading: {
+    type: Object,
+    default: () => ({
+      load: false,
+      text: "Loading...",
+      svg: "",
+      spinner: "",
+      svgViewBox: "",
+      background: ""
+    })
+  },
   /** Integrate Descriptions Item with align property into Descriptions property */
   align: {
     type: String,

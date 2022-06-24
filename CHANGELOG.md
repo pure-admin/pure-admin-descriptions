@@ -1,3 +1,13 @@
+## 0.0.2 (2022-06-24)
+
+### 🎫 Feat
+
+- add `loading` props in Descriptions
+
+### 🍏 Perf
+
+- types
+
 ## 0.0.1 (2022-06-23)
 
 ### 🎫 Feat

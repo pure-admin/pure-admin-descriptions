@@ -1,7 +1,8 @@
 import { ref } from "vue";
+import { type DescriptionsColumns } from "..";
 
 export function useColumns() {
-  const columns = ref([
+  const columns = ref<DescriptionsColumns>([
     {
       label: "Username",
       prop: "name",

@@ -1,12 +1,12 @@
 <template>
   <PureDescriptions
-    v-loading="loading"
     title="Customized style list"
     align="left"
     :column="3"
     border
     :data="data"
     :columns="columns"
+    :loading="loading"
   >
     <template #extra>
       <el-button type="primary" @click="onRefresh">Refresh</el-button>
@@ -28,11 +28,28 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useColumns } from "./columns";
+import { type Loading } from "..";
 import { PureDescriptions } from "../packages";
 // import { PureDescriptions } from "../dist/index.es";
 const { columns } = useColumns();
 
-const loading = ref(true);
+const svg = `
+  <path class="path" d="
+    M 30 15
+    L 28 17
+    M 25.61 25.61
+    A 15 15, 0, 0, 1, 15 30
+    A 15 15, 0, 1, 1, 27.99 7.5
+    L 15 15
+  "
+  style="stroke-width: 4px; fill: rgba(0, 0, 0, 0)"/>
+`;
+
+const loading = ref<Loading>({
+  load: true,
+  svgViewBox: "-10, -10, 50, 50",
+  svg
+});
 const data = ref<any>();
 
 setTimeout(() => {
@@ -45,13 +62,13 @@ setTimeout(() => {
       skill: "eat、work、sleep"
     }
   ];
-  loading.value = false;
+  loading.value.load = false;
 }, 400);
 
 function onRefresh() {
-  loading.value = true;
+  loading.value.load = true;
   setTimeout(() => {
-    loading.value = false;
+    loading.value.load = false;
   }, 400);
 }
 </script>

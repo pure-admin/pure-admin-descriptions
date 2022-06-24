@@ -1,4 +1,5 @@
 export type {
+  Loading,
   DescriptionsAlign,
   DescriptionsColumns,
   PureDescriptionsProps

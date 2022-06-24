@@ -8,7 +8,7 @@ export default defineComponent({
   name: "PureDescriptions",
   props,
   setup(props, { slots, attrs }) {
-    const { data, columns, align, labelAlign } = toRefs(
+    const { data, columns, align, labelAlign, loading } = toRefs(
       props
     ) as unknown as PureDescriptionsProps;
 
@@ -18,7 +18,17 @@ export default defineComponent({
     };
 
     return () => (
-      <el-descriptions {...props} {...attrs} v-slots={descriptionsSlot}>
+      <el-descriptions
+        {...props}
+        {...attrs}
+        v-slots={descriptionsSlot}
+        v-loading={unref(loading).load}
+        element-loading-text={unref(loading).text ?? "Loading..."}
+        element-loading-svg={unref(loading).svg}
+        element-loading-spinner={unref(loading).spinner}
+        element-loading-svg-view-box={unref(loading).svgViewBox}
+        element-loading-background={unref(loading).background}
+      >
         {unref(columns).map((column, index) => {
           let value = unref(data).map(v => v[column?.prop]);
           const defaultSlots = {
