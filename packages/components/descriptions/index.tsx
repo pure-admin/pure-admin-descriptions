@@ -12,10 +12,21 @@ export default defineComponent({
       props
     ) as unknown as PureDescriptionsProps;
 
-    const descriptionsSlot = {
-      title: () => slots?.title && slots.title({ props, attrs }),
+    const titleSlot = {
+      title: () => slots?.title && slots.title({ props, attrs })
+    };
+    const extraSlot = {
       extra: () => slots?.extra && slots.extra({ props, attrs })
     };
+
+    const descriptionsSlot =
+      slots?.title && !slots?.extra
+        ? titleSlot
+        : slots?.extra && !slots?.title
+        ? extraSlot
+        : slots?.title && slots?.extra
+        ? Object.assign(titleSlot, extraSlot)
+        : null;
 
     return () => (
       <el-descriptions
