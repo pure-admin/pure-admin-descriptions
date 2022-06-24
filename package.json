@@ -34,7 +34,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "volar.d.ts"
   ],
   "sideEffects": false,
   "scripts": {
