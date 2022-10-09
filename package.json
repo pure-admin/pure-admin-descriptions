@@ -1,6 +1,6 @@
 {
   "name": "@pureadmin/descriptions",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "packageManager": "pnpm@7.0.1",
   "description": "Use tsx syntax to encapsulate element-plus Descriptions twice to provide flexible configuration items",
   "keywords": [
