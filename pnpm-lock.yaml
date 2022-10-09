@@ -8,7 +8,7 @@ specifiers:
   '@types/node': ^18.0.0
   '@vitejs/plugin-vue': ^3.1.2
   '@vitejs/plugin-vue-jsx': ^2.0.1
-  element-plus: ^2.2.6
+  element-plus: ^2.2.17
   husky: ^8.0.1
   lint-staged: ^13.0.2
   prettier: ^2.7.1
@@ -16,7 +16,7 @@ specifiers:
   rollup-plugin-terser: ^7.0.2
   typescript: ^4.7.4
   vite: ^3.1.6
-  vue: ^3.2.37
+  vue: ^3.2.40
   vue-tsc: ^0.38.1
 
 dependencies:

@@ -3,6 +3,7 @@ import Renderer from "../renderer";
 import { isFunction } from "../helper";
 import { PureDescriptionsProps } from "../../types";
 import { defineComponent, toRefs, unref } from "vue";
+import { ElDescriptions, ElDescriptionsItem } from "element-plus";
 
 export default defineComponent({
   name: "PureDescriptions",
@@ -29,7 +30,7 @@ export default defineComponent({
         : null;
 
     return () => (
-      <el-descriptions
+      <ElDescriptions
         {...props}
         {...attrs}
         v-slots={descriptionsSlot}
@@ -94,7 +95,7 @@ export default defineComponent({
             return column?.hide(attrs);
           }
           return (
-            <el-descriptions-item
+            <ElDescriptionsItem
               {...column}
               key={index}
               align={column.align ? column.align : unref(align)}
@@ -103,10 +104,10 @@ export default defineComponent({
               }
             >
               {scopedSlots}
-            </el-descriptions-item>
+            </ElDescriptionsItem>
           );
         })}
-      </el-descriptions>
+      </ElDescriptions>
     );
   }
 });
