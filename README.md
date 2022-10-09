@@ -1,37 +1,37 @@
 <h1 align="center">@pureadmin/descriptions</h1>
-<p align="center">Secondary encapsulation of element-plus Descriptions, providing flexible configuration items</p>
+<p align="center">二次封装element-plus的Descriptions，提供灵活的配置项</p>
 
 <p align="center">
 <a href="https://www.npmjs.com/package/@pureadmin/descriptions" target="__blank"><img src="https://img.shields.io/npm/v/@pureadmin/descriptions?color=a1b858&label=" alt="NPM version"></a>
 <a href="https://www.npmjs.com/package/@pureadmin/descriptions" target="__blank"><img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@pureadmin/descriptions?color=50a36f&label="></a>
 </p>
 
-English | [简体中文](./README.zh_CN.md)
+简体中文 | [English](./README.en-US.md)
 
-- [Preview](https://pure-admin-descriptions.vercel.app)
+- [预览地址](https://pure-admin-descriptions.vercel.app)
 
-## 🤔 Original intention of development
+## 🤔 开发初衷
 
-- `element-plus` [Descriptions](https://element-plus.org/en-US/component/descriptions.html#descriptions-item-attributes) `Descriptions Item` attribute can only be written in the `<template></template>` template at present, which is not very flexible. If there are enough `Item` describing the list, the code is written and looks bloated, so I developed this library, Let's explore together
+- `element-plus` [Descriptions](https://element-plus.org/zh-CN/component/descriptions.html#descriptions-item-%E5%B1%9E%E6%80%A7) 的`Descriptions Item`属性目前只能写在`<template></template>`模版里，这样不是很灵活，如果描述列表的`Item`足够多，代码写、看起来很臃肿，于是我开发了这个库，让我们一起探索吧
 
-## 🚀 Features
+## 🚀 特性
 
-- 🦾 **High flexibility**: Written using `tsx` syntax, while ensuring the type, it provides developers with more flexible writing methods and provides users with more convenient configuration
-- ⚡ **Fully tree-shaking**: Comes with Tree-shaking, only packages the imported code
-- 🫶 **Code Zero Intrusion**: Keep all attributes and slots of `element-plus` [Descriptions](https://element-plus.org/en-US/component/descriptions.html) and provide more Flexible configuration
-- ⚓ **Verification before code submission**: Use [husky](https://typicode.github.io/husky/#/) to verify the rules before submitting code, enforce standard development process and prevent development mistakes
+- 🦾 **灵活度高**: 使用`tsx`语法编写，保证类型的同时，给开发者提供了更灵活的写法，给使用者提供了更方便的配置
+- ⚡ **完全可摇树**: 自带 Tree-shaking，只对引入的代码进行打包
+- 🫶 **代码零侵入**: 保持`element-plus` [Descriptions](https://element-plus.org/zh-CN/component/descriptions.html) 所有属性、插槽的同时，提供更灵活的配置
+- ⚓ **代码提交前校验**: 使用 [husky](https://typicode.github.io/husky/#/) 对提交代码前进行规则校验，强制规范开发流程，防止开发失误
 
-## 📦 Install
+## 📦 安装
 
 ```bash
 npm install @pureadmin/descriptions
-or 
+or
 pnpm add @pureadmin/descriptions
 ```
 
-## 🦄 Usage
+## 🦄 用法
 
-### Partial registration (single file)
+### 局部注册（单文件）
 
 ```ts
 import { PureDescriptions } from "@pureadmin/descriptions";
@@ -39,7 +39,7 @@ import { PureDescriptions } from "@pureadmin/descriptions";
 <pure-descriptions :data="data" :columns="columns"></pure-descriptions>
 ```
 
-### Global registration (main.ts)
+### 全局注册（main.ts）
 
 ```ts
 import { createApp } from "vue";
@@ -52,11 +52,11 @@ const app = createApp(App);
 app.use(PureDescriptions).mount("#app");
 ```
 
-[Click to view the specific usage](https://github.com/xiaoxian521/pure-admin-descriptions/blob/main/src/App.vue)
+[点击查看具体用法](https://github.com/xiaoxian521/pure-admin-descriptions/blob/main/src/App.vue)
 
-## Volar support
+## Volar 支持
 
-- If you are using `Volar`, you can configure compilerOptions.types in tsconfig.json to specify the global component type (especially if you want to get type hints during global registration, you need to add the following configuration)
+- 如果您在使用 `Volar`，那么可以在 tsconfig.json 中配置 compilerOptions.types 来指定全局组件类型（尤其是全局注册时要想获得类型提示就需要加上下面配置）
 
 ```js
 // tsconfig.json
@@ -68,6 +68,6 @@ app.use(PureDescriptions).mount("#app");
 }
 ```
 
-## License
+## 许可证
 
 [MIT © xiaoxian521-2022](./LICENSE)
