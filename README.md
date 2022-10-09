@@ -8,7 +8,7 @@
 
 简体中文 | [English](./README.en-US.md)
 
-- [预览地址](https://pure-admin-descriptions.vercel.app)
+- [预览地址](https://xiaoxian521.github.io/pure-admin-descriptions)
 
 ## 🤔 开发初衷
 
