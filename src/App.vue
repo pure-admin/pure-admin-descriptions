@@ -28,7 +28,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useColumns } from "./columns";
-import { type Loading } from "..";
+import { type Loading } from "../packages/types/index";
 import { PureDescriptions } from "../packages";
 // import { PureDescriptions } from "../dist/index.es";
 const { columns } = useColumns();
