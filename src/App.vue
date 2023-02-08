@@ -13,7 +13,7 @@
     </template>
     <template #title>
       <a
-        href="https://github.com/xiaoxian521/pure-admin-descriptions"
+        href="https://github.com/pure-admin/pure-admin-descriptions"
         target="_blank"
       >
         @pureadmin/descriptions

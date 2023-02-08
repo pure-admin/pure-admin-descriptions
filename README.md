@@ -8,7 +8,7 @@
 
 简体中文 | [English](./README.en-US.md)
 
-- [预览地址](https://xiaoxian521.github.io/pure-admin-descriptions)
+- [预览地址](https://pure-admin.github.io/pure-admin-descriptions)
 
 ## 🤔 开发初衷
 
@@ -52,7 +52,7 @@ const app = createApp(App);
 app.use(PureDescriptions).mount("#app");
 ```
 
-[点击查看具体用法](https://github.com/xiaoxian521/pure-admin-descriptions/blob/main/src/App.vue)
+[点击查看具体用法](https://github.com/pure-admin/pure-admin-descriptions/blob/main/src/App.vue)
 
 ## Volar 支持
 
@@ -70,4 +70,4 @@ app.use(PureDescriptions).mount("#app");
 
 ## 许可证
 
-[MIT © xiaoxian521-2022](./LICENSE)
+[MIT © xiaoxian521-latest](./LICENSE)

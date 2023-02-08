@@ -8,7 +8,7 @@
 
 English | [简体中文](./README.md)
 
-- [Preview](https://xiaoxian521.github.io/pure-admin-descriptions)
+- [Preview](https://pure-admin.github.io/pure-admin-descriptions)
 
 ## 🤔 Original intention of development
 
@@ -52,7 +52,7 @@ const app = createApp(App);
 app.use(PureDescriptions).mount("#app");
 ```
 
-[Click to view the specific usage](https://github.com/xiaoxian521/pure-admin-descriptions/blob/main/src/App.vue)
+[Click to view the specific usage](https://github.com/pure-admin/pure-admin-descriptions/blob/main/src/App.vue)
 
 ## Volar support
 
@@ -70,4 +70,4 @@ app.use(PureDescriptions).mount("#app");
 
 ## License
 
-[MIT © xiaoxian521-2022](./LICENSE)
+[MIT © xiaoxian521-latest](./LICENSE)
