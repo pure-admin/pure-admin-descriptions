@@ -1,3 +1,11 @@
+# Changelog
+
+## 1.2.0 (2023-10-20)
+
+### 🐞 Bug fixes
+
+- 修复 `Cannot find type definition file for '@pureadmin/descriptions/volar'` 警告
+
 ## 1.1.0 (2022-06-24)
 
 ### 🐞 Bug fixes
