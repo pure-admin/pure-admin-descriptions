@@ -1,10 +1,11 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@commitlint/cli': ^17.0.2
   '@commitlint/config-conventional': ^17.0.2
   '@element-plus/icons-vue': ^2.0.6
   '@esbuild-kit/cjs-loader': ^2.2.0
+  '@pureadmin/release': ^1.0.0
   '@types/node': ^18.0.0
   '@vitejs/plugin-vue': ^3.1.2
   '@vitejs/plugin-vue-jsx': ^2.0.1
@@ -28,6 +29,7 @@ devDependencies:
   '@commitlint/cli': 17.1.2
   '@commitlint/config-conventional': 17.1.0
   '@esbuild-kit/cjs-loader': 2.4.0
+  '@pureadmin/release': 1.0.0
   '@types/node': 18.8.3
   '@vitejs/plugin-vue': 3.1.2_vite@3.1.6+vue@3.2.40
   '@vitejs/plugin-vue-jsx': 2.0.1_vite@3.1.6+vue@3.2.40
@@ -424,10 +426,10 @@ packages:
       '@types/node': 14.18.31
       chalk: 4.1.2
       cosmiconfig: 7.0.1
-      cosmiconfig-typescript-loader: 4.1.1_33d7b64ae90e9bb80d48469351c457b9
+      cosmiconfig-typescript-loader: 4.1.1_gpl3msxjb2n3qdkii2jvdrcxxe
       lodash: 4.17.21
       resolve-from: 5.0.0
-      ts-node: 10.9.1_2abc08acbb4fe741ae8218df9aa74f5c
+      ts-node: 10.9.1_fk6arlf3j7tudlucddpzvj2plq
       typescript: 4.8.4
     transitivePeerDependencies:
       - '@swc/core'
@@ -613,6 +615,11 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
+  /@pureadmin/release/1.0.0:
+    resolution: {integrity: sha512-cFXev9X+TQNmpb8E8agD53ZfL5DCYpY25SPpLUXo42Twa62vmJckc+xqh95r4tvgMi0eqUEFRuiSHr1oS3pHmQ==}
+    hasBin: true
     dev: true
 
   /@sxzz/popperjs-es/2.11.7:
@@ -801,7 +808,6 @@ packages:
     dependencies:
       '@vue/reactivity': 3.2.40
       '@vue/shared': 3.2.40
-    dev: false
 
   /@vue/runtime-dom/3.2.40:
     resolution: {integrity: sha512-AO2HMQ+0s2+MCec8hXAhxMgWhFhOPJ/CyRXnmTJ6XIOnJFLrH5Iq3TNwvVcODGR295jy77I6dWPj+wvFoSYaww==}
@@ -809,7 +815,6 @@ packages:
       '@vue/runtime-core': 3.2.40
       '@vue/shared': 3.2.40
       csstype: 2.6.21
-    dev: false
 
   /@vue/server-renderer/3.2.40_vue@3.2.40:
     resolution: {integrity: sha512-gtUcpRwrXOJPJ4qyBpU3EyxQa4EkV8I4f8VrDePcGCPe4O/hd0BPS7v9OgjIQob6Ap8VDz9G+mGTKazE45/95w==}
@@ -819,7 +824,6 @@ packages:
       '@vue/compiler-ssr': 3.2.40
       '@vue/shared': 3.2.40
       vue: 3.2.40
-    dev: false
 
   /@vue/shared/3.2.40:
     resolution: {integrity: sha512-0PLQ6RUtZM0vO3teRfzGi4ltLUO5aO+kLgwh4Um3THSR03rpQWLTuRCkuO5A41ITzwdWeKdPHtSARuPkoo5pCQ==}
@@ -1110,8 +1114,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      is-text-path: 1.0.1
       JSONStream: 1.3.5
+      is-text-path: 1.0.1
       lodash: 4.17.21
       meow: 8.1.2
       split2: 3.2.2
@@ -1124,7 +1128,7 @@ packages:
       safe-buffer: 5.1.2
     dev: true
 
-  /cosmiconfig-typescript-loader/4.1.1_33d7b64ae90e9bb80d48469351c457b9:
+  /cosmiconfig-typescript-loader/4.1.1_gpl3msxjb2n3qdkii2jvdrcxxe:
     resolution: {integrity: sha512-9DHpa379Gp0o0Zefii35fcmuuin6q92FnLDffzdZ0l9tVd3nEobG3O+MZ06+kuBvFTSVScvNb/oHA13Nd4iipg==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -1135,7 +1139,7 @@ packages:
     dependencies:
       '@types/node': 14.18.31
       cosmiconfig: 7.0.1
-      ts-node: 10.9.1_2abc08acbb4fe741ae8218df9aa74f5c
+      ts-node: 10.9.1_fk6arlf3j7tudlucddpzvj2plq
       typescript: 4.8.4
     dev: true
 
@@ -1165,7 +1169,6 @@ packages:
 
   /csstype/2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
-    dev: false
 
   /dargs/7.0.0:
     resolution: {integrity: sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==}
@@ -1238,7 +1241,7 @@ packages:
       escape-html: 1.0.3
       lodash: 4.17.21
       lodash-es: 4.17.21
-      lodash-unified: 1.0.2_da03a4540fbd16bbaafbb96724306afd
+      lodash-unified: 1.0.2_3ib2ivapxullxkx3xftsimdk7u
       memoize-one: 6.0.0
       normalize-wheel-es: 1.2.0
       vue: 3.2.40
@@ -1863,7 +1866,7 @@ packages:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
     dev: false
 
-  /lodash-unified/1.0.2_da03a4540fbd16bbaafbb96724306afd:
+  /lodash-unified/1.0.2_3ib2ivapxullxkx3xftsimdk7u:
     resolution: {integrity: sha512-OGbEy+1P+UT26CYi4opY4gebD8cWRDxAT6MAObIVQMiqYdxZr1g3QHWCToVsm31x2NkLS4K3+MC2qInaRMa39g==}
     peerDependencies:
       '@types/lodash-es': '*'
@@ -2549,7 +2552,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-node/10.9.1_2abc08acbb4fe741ae8218df9aa74f5c:
+  /ts-node/10.9.1_fk6arlf3j7tudlucddpzvj2plq:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -2707,7 +2710,6 @@ packages:
       '@vue/runtime-dom': 3.2.40
       '@vue/server-renderer': 3.2.40_vue@3.2.40
       '@vue/shared': 3.2.40
-    dev: false
 
   /which/2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}

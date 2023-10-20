@@ -1,7 +1,6 @@
 {
   "name": "@pureadmin/descriptions",
   "version": "1.1.1",
-  "packageManager": "pnpm@7.0.1",
   "description": "Use tsx syntax to encapsulate element-plus Descriptions twice to provide flexible configuration items",
   "keywords": [
     "@pureadmin/descriptions",
@@ -31,9 +30,12 @@
   "jsdelivr": "dist/index.umd.js",
   "exports": {
     ".": {
-      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.es.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.umd.js"
+    },
+    "./volar": {
+      "types": "./volar.d.ts"
     }
   },
   "files": [
@@ -49,6 +51,7 @@
     "lint": "prettier --write  \"packages/**/*.{ts,tsx}\"",
     "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
     "lint:pretty": "pretty-quick --staged",
+    "pub": "pub lib",
     "prepare": "husky install"
   },
   "peerDependencies": {
@@ -63,6 +66,7 @@
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
     "@esbuild-kit/cjs-loader": "^2.2.0",
+    "@pureadmin/release": "^1.0.0",
     "@types/node": "^18.0.0",
     "@vitejs/plugin-vue": "^3.1.2",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
