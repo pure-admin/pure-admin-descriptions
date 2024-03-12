@@ -1,14 +1,23 @@
 import props from "./props";
 import Renderer from "../renderer";
-import { isFunction } from "../helper";
 import { PureDescriptionsProps } from "../../types";
-import { defineComponent, toRefs, unref } from "vue";
 import { ElDescriptions, ElDescriptionsItem } from "element-plus";
+import { defineComponent, ref, unref, toRefs, computed } from "vue";
+import {
+  type RefValue,
+  delay,
+  isArray,
+  isFunction,
+  useCopyToClipboard
+} from "@pureadmin/utils";
 
 export default defineComponent({
   name: "PureDescriptions",
   props,
   setup(props, { slots, attrs }) {
+    const curCopyActive = ref(-1);
+    const copySvg = new URL("../copy.svg", import.meta.url).href;
+    const checkSvg = new URL("../check.svg", import.meta.url).href;
     const { data, columns, align, labelAlign, loading } = toRefs(
       props
     ) as unknown as PureDescriptionsProps;
@@ -28,6 +37,28 @@ export default defineComponent({
         : slots?.title && slots?.extra
         ? Object.assign(titleSlot, extraSlot)
         : null;
+
+    const { copied, update } = useCopyToClipboard();
+
+    function onCopy(value: string | any[] | RefValue<string>, index: number) {
+      if (copied.value) return;
+      curCopyActive.value = index;
+      isArray(value) ? update(value[0]) : update(value);
+      delay(600).then(() => (copied.value = !copied.value));
+    }
+
+    const copyStyle = computed(() => {
+      return {
+        cursor: "pointer",
+        marginLeft: "4px",
+        verticalAlign: "sub"
+      };
+    });
+
+    const copySrc = computed(
+      () => (index: number) =>
+        curCopyActive.value === index && copied.value ? checkSvg : copySvg
+    );
 
     return () => (
       <ElDescriptions
@@ -66,9 +97,29 @@ export default defineComponent({
                 });
               } else {
                 return column?.value ? (
-                  <>{unref(column.value)}</>
+                  <>
+                    {unref(column.value)}
+                    {unref(column?.copy) && (
+                      <img
+                        src={copySrc.value(index)}
+                        style={copyStyle.value}
+                        onClick={() =>
+                          onCopy(unref(column.value) as any, index)
+                        }
+                      />
+                    )}
+                  </>
                 ) : (
-                  <>{value}</>
+                  <>
+                    {value}
+                    {column?.copy && (
+                      <img
+                        src={copySrc.value(index)}
+                        style={copyStyle.value}
+                        onClick={() => onCopy(value, index)}
+                      />
+                    )}
+                  </>
                 );
               }
             }

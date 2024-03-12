@@ -1,12 +1,13 @@
 import { ref } from "vue";
-import { type DescriptionsColumns } from "..";
+// import { type DescriptionsColumns } from "..";
 
 export function useColumns() {
-  const columns = ref<DescriptionsColumns>([
+  const columns = ref([
     {
       label: "Username",
       prop: "name",
       width: 180,
+      copy: true,
       hide: () => false
     },
     {
@@ -26,7 +27,8 @@ export function useColumns() {
       label: "Place",
       prop: "place",
       labelClassName: "my-label",
-      className: "my-content"
+      className: "my-content",
+      copy: true
     },
     {
       label: "Remarks",
