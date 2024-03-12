@@ -55,10 +55,10 @@ export default defineComponent({
       };
     });
 
-    const copySrc = computed(() => {
-      return (index: number) =>
-        curCopyActive.value === index && copied.value ? checkSvg : copySvg;
-    });
+    const copySrc = computed(
+      () => (index: number) =>
+        curCopyActive.value === index && copied.value ? checkSvg : copySvg
+    );
 
     return () => (
       <ElDescriptions
